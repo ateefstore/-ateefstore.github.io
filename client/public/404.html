@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content="0; url=./" />
+    <script>
+      // Preserve the original path by moving it into the hash so the SPA router can restore it.
+      // This works well with HashRouter; if you use BrowserRouter, consider switching or
+      // handling the path on load inside your app.
+      const path = location.pathname + location.search + location.hash;
+      location.replace('/#' + path);
+    </script>
+  </head>
+  <body></body>
+</html>
